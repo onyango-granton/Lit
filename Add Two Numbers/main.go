@@ -20,15 +20,15 @@ func (l *LinkedList) addNode(num int){
 }
 
 func (l *LinkedList) printNode() []int{
-	res :=
 	currentNode := l.headNode
 	for currentNode != nil{
 		fmt.Println(currentNode.data)
 		currentNode = currentNode.nextNode
 	}
+	return []int{}
 }
 
-func main() {
+func main2() {
 	linkList := &LinkedList{}
 
 	linkList.addNode(47)
