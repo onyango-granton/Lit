@@ -2,8 +2,8 @@ package main
 
 import "fmt"
 
-type ListNode struct{
-	Val int
+type ListNode struct {
+	Val  int
 	Next *ListNode
 }
 
@@ -17,4 +17,3 @@ type ListNode struct{
 
 
 
-}
