@@ -24,6 +24,7 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode)  {
 	revArr2 := []int{}
 
 	// shorterArr := []int{}
+	// longerArr := []int{}
 
 	for l1 != nil{
 		arr1 = append(arr1, l1.Val)
@@ -49,6 +50,12 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode)  {
 	// 	shorterArr = arr2
 	// }
 
+	// if len(arr1) > len(arr2){
+	// 	longerArr = arr1
+	// } else {
+	// 	longerArr = arr2
+	// }
+
 	arr1Index := len(arr1)-1
 	arr2Index := len(arr2)-1
 
@@ -57,7 +64,8 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode)  {
 	carry := 0
 
 	for !(arr1Index < 0) && !(arr2Index < 0){
-		indexSum := arr1[arr1Index]+arr2[arr2Index]
+		fmt.Println(revArr1[arr1Index],revArr2[arr2Index])
+		indexSum := revArr1[arr1Index]+revArr2[arr2Index]
 		remainder := indexSum % 10
 		indexCarry := indexSum / 10
 		resArr = append(resArr, remainder+carry)
@@ -65,6 +73,8 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode)  {
 		arr1Index--
 		arr2Index--
 	}
+
+
 
 	fmt.Println(resArr)
 }
@@ -92,12 +102,13 @@ func main() {
 	Bnode8 := &ListNode{Val: 7, Next: Bnode7}
 	Bnode9 := &ListNode{Val: 6, Next: Bnode8}
 
-	Cnode1 := &ListNode{Val: 2, Next: nil}
-	Cnode2 := &ListNode{Val: 3, Next: Cnode1}
-	Cnode3 := &ListNode{Val: 4, Next: Cnode2}
+	Cnode1 := &ListNode{Val: 3, Next: nil}
+	Cnode2 := &ListNode{Val: 4, Next: Cnode1}
+	Cnode3 := &ListNode{Val: 2, Next: Cnode2}
+	// Cnode4 := &ListNode{Val: 1, Next: Cnode3}
 
-	Dnode1 := &ListNode{Val: 3, Next: nil}
-	Dnode2 := &ListNode{Val: 4, Next: Dnode1}
+	Dnode1 := &ListNode{Val: 4, Next: nil}
+	Dnode2 := &ListNode{Val: 6, Next: Dnode1}
 	Dnode3 := &ListNode{Val: 5, Next: Dnode2}
 
 	addTwoNumbers(Anode9,Bnode9)
