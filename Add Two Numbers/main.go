@@ -9,6 +9,14 @@ type ListNode struct {
 
 }
 
+func linkedListToArr(l *ListNode) []int {
+	res := []int{}
+	for l != nil {
+		res = append(res, l.Val)
+		l = l.Next
+	}
+	return res
+}
 
 }
 
