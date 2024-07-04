@@ -34,5 +34,20 @@ func longerArr(arr1, arr2 []int) []int {
 	}
 }
 
+func arrToLinkedList(arr []int) *ListNode {
+	initNode := &ListNode{}
+	for i, ch := range arr {
+		if i == 0 {
+			initNode.Val = ch
+			initNode.Next = nil
+		} else {
+			currentNode := &ListNode{}
+			currentNode.Val = ch
+			currentNode.Next = initNode
+			initNode = currentNode
+		}
+	}
+	return initNode
+}
 
 
