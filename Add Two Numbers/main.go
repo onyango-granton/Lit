@@ -26,6 +26,11 @@ func revArr(arr []int) []int {
 	return res
 }
 
+func longerArr(arr1, arr2 []int) []int {
+	if len(arr1) > len(arr2) {
+		return arr1
+	} else {
+		return arr2
 	}
 }
 
