@@ -18,6 +18,12 @@ func linkedListToArr(l *ListNode) []int {
 	return res
 }
 
+func revArr(arr []int) []int {
+	res := []int{}
+	for i := len(arr) - 1; i >= 0; i-- {
+		res = append(res, arr[i])
+	}
+	return res
 }
 
 	}
