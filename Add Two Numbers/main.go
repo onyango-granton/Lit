@@ -101,4 +101,20 @@ func arrToLinkedList(arr []int) *ListNode {
 	return initNode
 }
 
+func main() {
+	Anode1 := &ListNode{Val: 9, Next: nil}
+	Anode2 := &ListNode{Val: 9, Next: Anode1}
+	Anode3 := &ListNode{Val: 9, Next: Anode2}
+	Anode4 := &ListNode{Val: 9, Next: Anode3}
+	Anode5 := &ListNode{Val: 9, Next: Anode4}
+	Anode6 := &ListNode{Val: 9, Next: Anode5}
+	Anode7 := &ListNode{Val: 9, Next: Anode6}
+	Anode8 := &ListNode{Val: 9, Next: Anode7}
 
+	Bnode1 := &ListNode{Val: 9, Next: nil}
+	Bnode2 := &ListNode{Val: 9, Next: Bnode1}
+	Bnode3 := &ListNode{Val: 9, Next: Bnode2}
+	Bnode4 := &ListNode{Val: 9, Next: Bnode3}
+
+	fmt.Println(addTwoNumbers(Anode8, Bnode4))
+}
